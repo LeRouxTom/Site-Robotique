@@ -1,0 +1,209 @@
+/* classe du body */
+.accueil {
+    display: flex;
+    margin: 0;
+    width: auto;
+    flex-flow: column wrap;
+    background: #E7F0FF;
+}
+
+/* classe du main */
+.accueilCont {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* classe pour le titre */
+.titre  {
+    margin-bottom: 2.5em;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 1px 1px 13px -2px rgba(0,0,0,0.54);
+    background-image:linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../assets/banniererobotique.avif);
+    background-size: 100%;
+}
+
+/* classe pour le titre h1 */
+.titreH {
+    font-size: 9em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* classe pour div presentation */
+.presentation {
+    display: flex;
+    height: auto;
+    width: 100%;
+    flex-flow: row;
+    justify-content: center;
+}
+
+/* classe pour le texte de presentation */
+.pres {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin-top: 1em;
+    background: #ececec ;
+    box-shadow: 1px 1px 13px -2px rgba(0,0,0,0.54);
+}
+
+/* classe pour le titre du texte de presentation */
+.pres > h2 {
+    font-size: xxx-large;
+}
+
+/* classe pour l'image de presentation */
+.imagePres {
+    width: 50%;
+}
+
+/* classe pour le texte des projets */
+.text {
+    display: flex;
+    flex-flow: column;
+    width: 40%;
+    height: auto;
+    background: #ececec;
+    justify-content: center;
+    margin-top: 1em;
+    box-shadow: 1px 1px 13px -2px rgba(0,0,0,0.54);
+}
+
+/* classe pour l'image des projets */
+.imageProjAcc {
+    display: flex;
+    width: 40%;
+    margin-bottom: 1em;
+    justify-content: start;
+}
+
+/* pour le h2 */
+h2 {
+    text-align: center;
+}
+
+/* pour la barre de séparation */
+hr {
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+/* pour afficher l'image en plus haut */
+.projetAcc {
+    display: flex;
+    margin-bottom: 5em;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+/* Texte de presentation des projets */
+.textProjAcc   {
+    padding-right: 3em;
+    padding-left: 3em;
+}
+
+/* pour le texte d'introduction */
+.textIntro {
+    width: 80%;
+}
+
+/* image presentation */
+.imgPres {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1em;
+    box-shadow: 1px 1px 13px -2px rgba(0,0,0,0.54);
+}
+
+/* image projet */
+.imgProjAcc{
+    max-width: 100%;
+    height: 100%;
+    max-height: 22em;
+    box-shadow: 1px 1px 13px -2px rgba(0,0,0,0.54);
+}
+
+/* image projet2 */
+.imageProjAcc2 {
+    display: flex;
+    width: 40%;
+    justify-content: end;
+    margin-bottom: 1em;
+}
+
+/* C'est la responsive */
+@media (max-width: 950px)	{
+	.presentation	{
+		display:flex;
+		flex-flow: column-reverse nowrap;
+		width: 100%;
+	}
+    .pres   {
+        width: 100%;
+        margin: 0;
+    }
+    .imagePres    {
+        width: 100%;
+    }
+    .textIntro  {
+        padding-right: 3em;
+        padding-left: 3em;
+    }
+    .titreH {
+        font-size: 5em;
+    }
+    .projetAcc  {
+        display: flex;
+        flex-flow: column nowrap;
+        height: auto;
+    }
+    .projetAcc2  {
+        display: flex;
+        flex-flow: column-reverse nowrap;
+        height: auto;
+    }
+    .text   {
+        width: 100%;
+    }
+    .imageProjAcc {
+        width: 100%;
+    }
+    .imageProjAcc2 {
+        width: 100%;
+    }
+    .imgProjAcc {
+        width: 100%;
+        max-height: none;
+    }
+    .imgPres    {
+        margin: 0;
+    }
+}
+@media (max-width: 1200px)	{
+    .titreH {
+        font-size: 6em;
+    }
+}
+@media (max-width: 800px)	{
+    .titreH {
+        font-size: 4em;
+    }
+}
+@media (max-width: 530px)	{
+    .titreH {
+        font-size: 3em;
+    }
+}
+@media (max-width: 400px)	{
+    .titreH {
+        font-size: 2em;
+    }
+}

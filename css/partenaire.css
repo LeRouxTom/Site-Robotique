@@ -1,0 +1,104 @@
+/* classe pour le titre */
+.titrePart  {
+    display: flex;
+    height: 10em;
+    flex-flow: row;
+    justify-content: center;
+}
+
+/* classe pour la partie presentation */
+.presPart   {
+    background: #ececec ;
+    box-shadow: 1px 1px 13px -2px rgba(0,0,0,0.54);
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+}
+
+/* classe pour la div description */
+.textPart   {
+    width: 40%;
+}
+
+/* pour le texte description */
+.textP  {
+    padding: 2em;
+}
+
+/* div de l'image presentation */
+.imagePart  {
+    display: flex;
+    justify-content: center;
+    width: 40%;
+}
+
+/* barre de séparation */
+hr  {
+    margin-top: 5em;
+    margin-bottom: 1em;
+}
+
+/* liste d'images sponsors */
+.imageSpons {
+    display: flex;
+    margin-bottom: 3em;
+    flex-flow: row;
+    justify-content: space-around;
+}
+
+/* logo sponsors */
+.logoSpons  {
+    display: flex;
+    justify-content: center;
+    width: 25%;
+    height: 5em;
+    margin-bottom: 2em;
+}
+
+/* titre principale */
+.titreH {
+    padding-top: 1.2em;
+}
+
+/* image de presentation */
+.imgPart{
+    height: 100%;
+}
+
+/* image des sponsors */
+.imgSpons {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* couleur du body */
+.partCont {
+    background: #E7F0FF;
+}
+
+/* responsive */
+@media (max-width: 950px)	{
+    .presPart   {
+        flex-flow: column nowrap;
+    }
+    .textPart   {
+        width: 100%;
+    }
+    .imagePart  {
+        width: 100%;
+    }
+    .imageSpons {
+        flex-flow: column nowrap;
+        align-items: center;
+        width: 50%;
+    }
+    .spons   {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-around;
+    }
+    .logoSpons  {
+        width: 45%;
+        height: auto;
+    }
+}

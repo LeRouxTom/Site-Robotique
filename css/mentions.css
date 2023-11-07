@@ -1,0 +1,27 @@
+.listArticle {
+    list-style: none;
+}
+
+.containerMention {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+main {
+    background: #E7F0FF;
+    display: flex;
+    justify-content: center;
+}
+
+.titre {
+    display: flex;
+    height: 10em;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerMention ul {
+    font-family: 'Work Sans', sans-serif;
+}

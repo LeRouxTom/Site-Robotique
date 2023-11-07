@@ -1,0 +1,261 @@
+/* barre de navigation */
+.navbar {
+    width: 100%;
+    box-sizing: border-box;
+    color: white;
+    background-color: #003478;
+    font-size: 1.1em;
+    height: 85px;
+}
+
+/* pour les premiers container de la barre de navigation */
+.navbar>.container {
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* les liens de la barre de navigation */
+.navbar a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* les listes non ordonées de la barre de navigation */
+.navbar ul {
+    height: 60px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* les items de liste de la barre de navigation */
+.navbar li {
+    transition-duration: 300ms;
+    transition-property: font-size;
+}
+
+/* effet hover des items de liste de la barre de navigation */
+.navbar li:hover {
+    font-weight: bold;
+}
+
+/* le menu deroulant de la barre de navigation */
+.navbar .menu-dropdown {
+    border-top: solid 0.6em transparent;
+    border-bottom: solid 0.6em transparent;
+}
+
+/* le contenu du menu déroulant de la barre de navigation */
+.navbar .menu-dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background: #003478;
+    border: solid 0.5px #fff;
+}
+
+/* les liens dans le contenu du menu déroulant de la barre de navigation */
+.navbar .menu-dropdown .dropdown-content a {
+    float: none;
+    padding: 12px 16px;
+    display: block;
+    text-align: left;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+/* effet hover pour le menu déroulant de la barre de navigation */
+.navbar .menu-dropdown:hover .dropdown-content {
+    display: block;
+    margin-top: 1.5em;
+    margin-left: -0.5em;
+}
+
+/* effet hover pour les liens dans le menu déroulant de la barre de navigation */
+.navbar .menu-dropdown .dropdown-content a:hover {
+    background: #FDB815;
+}
+
+/* les images dans la barre de navigation */
+.navbar img {
+    height: 80px;
+}
+
+/* la liste des liens */
+.navbar .nav-links {
+    display: flex;
+    align-items: center;
+}
+
+/* la liste non ordonée de la barre de navigation */
+.navbar .nav-links ul {
+    font-family: 'Public Sans', sans-serif;
+    display: flex;
+    list-style: none;
+}
+
+/* les items de la liste de la barre de navigation */
+.navbar .nav-links ul li {
+    display: flex;
+    margin: 0 10px;
+    padding: 5px;
+}
+
+/* la div juste après un item de liste de la barre de navigation */
+.navbar .nav-links ul li > div {
+    display: flex;
+}
+
+/* les liens dans un item de liste de la barre de navigation */
+.navbar .nav-links ul li a {
+    padding-right: 5px;
+}
+
+.navbar .nav-links ul li a.active::after {
+    content: '';
+    display: block;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+}
+
+/* icone pour les menus */
+.navbar .nav-item > i.fa {
+    margin-left: 5px;
+}
+
+/* bouton menu burger */
+.menu-burger {
+    position: relative;
+    display: none;
+    width: 41px;
+    cursor: pointer;
+    
+    appearance: none;
+    border: none;
+    background: none;
+    /* background-color: black; */
+    outline: none;
+}
+
+/* dessin du menu burger */
+.menu-burger .bar,
+.menu-burger::after,
+.menu-burger::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 6px;
+    background-color: #fff;
+    margin: 5px 0px;
+    transition: 0.4s;
+}
+
+/* affiche le bouton */
+.menu-burger.is-active .bar {
+    opacity: 0;
+}
+
+/* change le menu en croix */
+.menu-burger.is-active::before {
+    transform: rotate(-45deg) translate(-8px, 6px);
+}
+.menu-burger.is-active::after {
+    transform: rotate(45deg) translate(-9px, -8px);
+}
+
+/* empêche de scroll */
+.no-scroll {
+    overflow: hidden;
+}
+
+
+/* responsive */
+@media screen and (max-width: 750px) {
+    .navbar {
+        display: flex;
+    }
+    
+    .navbar .logo {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .navbar {
+        display: block;
+    }
+
+    .navbar .logo {
+        display: block;
+    }
+
+    .menu-burger {
+        display: block;
+    }
+    
+    .navbar.is-active {
+        height: 100vh;
+    }
+    
+    .navbar.is-active>.container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 4fr;
+        gap: 0px 0px;
+        height: 100%;
+        transition: 0.3s;
+    }
+    
+    .navbar.is-active .logo {
+        display: flex;
+        grid-row: 1;
+        grid-column: 2;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar.is-active .logo>img {
+        height: 140px;
+    }
+
+    .navbar.is-active .container>button {
+        grid-row: 1;
+        grid-column: 3;
+        justify-self: end;
+        right: 20%;
+    }
+
+    .navbar.is-active .nav-links {
+        grid-area: 2/1/4/4;
+        height: 100%;
+        align-items: start;
+    }
+
+    .navbar.is-active .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        align-items: start;
+        font-size: 1.5rem;
+    }
+
+    .navbar.is-active .nav-links ul li {
+        padding: 1.5rem;
+    }
+
+    .navbar .nav-links ul {
+        display: none;
+    }
+
+    .navbar.is-active .menu-dropdown .dropdown-content a {
+        font-size: 1.5rem;
+    }
+}

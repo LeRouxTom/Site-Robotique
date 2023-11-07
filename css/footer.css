@@ -1,0 +1,82 @@
+/* Pour la balise main */
+main {
+    min-height: 100vh;
+}
+
+/* pour le footer */
+footer {
+    width: 100%;
+    margin: 0 auto;
+    color: white;
+    background: #262B63;
+    font-family: 'Public Sans', sans-serif;
+}
+
+/* pour les balises p dans le footer */
+footer p {
+    font-family: 'Public Sans', sans-serif;
+}
+
+/* pour les balises div.container juste après footer */
+footer > div.container {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 15px 0;
+}
+
+/* une section du footer */
+.footer-item {
+    flex-basis: 30%;
+    text-align: center;
+}
+
+/* les images dans les sections du footer */
+.footer-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* les titres dans le footer */
+.footer-title {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* les logos des réseaux sociaux */
+div.social-network-logo {
+    display: flex;
+    justify-content: center;
+}
+
+/* les liens pour les réseaux sociaux */
+a.social {
+    display: flex;
+    height: 40px;
+    width: 40px;
+    color: black;
+    font-size: 25px;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+    margin: 5px;
+}
+
+/* l'effet de hover pour les liens pour les réseaux sociaux */
+a.social:hover {
+    background-color: #FDB815;
+    color: white;
+}
+
+/* respoonsive */
+@media (max-width: 500px) {
+    footer > div.container {
+        justify-content: center;
+        flex-direction: column;
+    }
+}

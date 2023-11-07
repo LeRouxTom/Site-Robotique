@@ -1,0 +1,53 @@
+body    {
+    background: #E7F0FF;
+}
+.titreProjets  {
+    display: flex;
+    height: 10em;
+    justify-content: center;
+}
+.barreLong  {
+    display: flex;
+    padding-top: 2.5em;
+    width: 100%;
+    height: 5em;
+    background: #ececec ;
+    margin-bottom: 20em;
+    justify-content: space-around;
+    box-shadow: 1px 1px 13px -2px rgba(0,0,0,0.54);
+}
+.boxProjets {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: 20em;
+    background: white;
+    box-shadow: 1px 1px 13px -2px rgba(0,0,0,0.54);
+    text-align: center;
+}
+.txtProj   {
+    padding: 1em;
+    height: 100%;
+}
+.allButton  {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 1.5em;
+    font-family: 'Work Sans', sans-serif;
+}
+button  {
+    background: #44658f;
+    color: white;
+    border-radius: 33px;
+    border: none;
+    font-size: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+}
+button:hover    {
+    cursor: pointer;
+    background: #FDB815;
+}

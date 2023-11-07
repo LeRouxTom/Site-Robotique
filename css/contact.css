@@ -1,0 +1,153 @@
+.contactCont{ /*mettre le fond de couleur de la page*/
+  background-color: #E7F0FF;
+}
+
+.titrePage  { /* CSS du titre de la page */
+  display: flex;
+  height: 10em;
+  flex-flow: row;
+  justify-content: center;
+}
+
+
+.titreContact {  /* mettre en forme le titre principale de la page*/
+  display: flex;
+  height: 10em;
+  flex-flow: row;
+  justify-content: center;
+  padding-top: 1.2em;
+}
+
+.titre{ /* mettre en forme les titre des données de contact*/
+  color: #003478;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5em;
+}
+
+
+
+.verticale.donnees{ /*bloc du formulaire*/
+  padding: 2em;
+}
+
+input::placeholder, textarea.texte { /* pour mettre la couleur de textes présent dans les cases du formulaire*/
+  color: gray;
+}
+
+.texte{ /* CSS du "écris ton message" dans le formulaire */
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+
+.envoyer{ /*CSS du bouton envoyer */
+  display: flex;
+  justify-content: center;
+}
+
+/* .all .form-example {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  height: 300px;
+} */
+
+.horizontal.form-example-mail { /* bloc pour la case mail du formulaire*/
+  display:flex;
+  justify-content: center;
+  margin-bottom: 2em;
+  width: 100%;
+}
+
+.horizontal.form-example { /* bloc pour les cases nom et prénom du formulaire*/
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2em;
+}
+
+.horizontal { /* permet de mettre les blocs en ligne*/
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+  
+.vertical { /* permet de mettre les blocs en colonne*/
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.verticale.boites { /*bloc du formulaire et de la zone de texte au dessus*/
+  width: calc(40% - 2 * 10px);
+  background: #ececec;
+  padding: 5em;
+  box-shadow: 1px 1px 13px -2px rgba(0,0,0,0.54);
+
+}
+
+.horizontal.contact { /* bloc des 3 infos pour contacter le club*/
+  display: flex;
+  flex-flow: row;
+  text-align: center;
+  align-items: center;
+  padding: 2em;
+}
+
+#email{ /* CSS de la case du formulaire pour le mail*/
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 25px;
+}
+
+#name, #lastname { /*CSS des cases du formulaire pour le nom et prénom*/
+  width: 45%;
+  height: 25px;
+}
+
+#lastname{ /* CSS pour la case du nom */
+  margin: 0;
+}
+
+.texteCont  { /* CSS du texte pour les contact ( pas les titres ) */
+  font-weight: bolder;
+  font-size: 1em;
+}
+
+form  { /* police du formulaire*/
+  font-family: 'Work Sans', sans-serif;
+}
+
+.verticale.map { /*bloc de la map google*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.texte > textarea { /* permet de modifier seulement la textarea qui se trouve dans la div texte*/
+  width: 100%;
+  min-height: 7em;
+  resize: none;
+}
+
+/*responsive*/
+
+@media (max-width: 1100px){
+  .all {
+    display: flex;
+    flex-flow: column;
+  }
+  #formulaire {
+    width: 100%;
+    padding: 0;
+  }
+  #txt {
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 2em;
+  }
+}
+
+
+
+
+
+

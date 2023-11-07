@@ -1,0 +1,293 @@
+/* background de tout le site*/
+body {
+    background: #E7F0FF;
+}
+/* div de class carrousel */
+.carrousel {
+    display: flex;
+    flex-direction: column;
+    padding: 2em 0;
+    
+}
+/* block a image en bas du carrousel */
+.carrousel .gallery {
+    height: auto;
+    width: auto;
+    max-width: 1200px;
+    margin: 10px auto;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+/* miniature dans la div gallery*/
+.carrousel .gallery .minia {
+    display: inline-block;
+    height: 150px;
+    width: 270px;
+    background: #494242;
+    /* margin: 15px; */
+    border: solid 2px transparent;
+}
+/* image dans la div miniature */
+.carrousel .gallery .minia img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    opacity: 60%;
+}
+
+.carrousel .gallery .minia img:hover {
+    opacity: 100%;
+}
+
+.carrousel .gallery .minia.selected {
+    border: solid 2px #003478;
+    position: relative;
+}
+
+.carrousel .gallery .minia.selected img {
+    opacity: 100%;
+}
+
+.carrousel .gallery .minia.selected::after {
+    content:'';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    border-left: 11px solid transparent;
+    border-right: 11px solid transparent;
+    border-top: 11px solid #003478;
+}
+
+.carrousel .gallery::-webkit-scrollbar {
+    width: 1em;
+    height: 1em;
+}
+
+.carrousel .gallery::-webkit-scrollbar-track {
+    background: #fff; /* #c6c6c6 */
+    border-radius: 100vw;
+}
+
+.carrousel .gallery::-webkit-scrollbar-thumb {
+    background: #505050;
+    border: 0.15em solid #fff; /* #c6c6c6 */
+    border-radius: 100vw;
+}
+/* div ou il y a les images en grand */
+.slider {
+    margin: auto;
+    width: 100%;
+    max-width: 1200px;
+    height: 60vw;
+    /* height: 675px; */
+    max-height: 675px;
+    position: relative;
+    overflow: hidden;
+    /* border: solid 2px #003478; */
+    /* background: #494242; */
+    box-sizing: border-box;
+    
+    box-shadow: 1px 1px 13px -2px rgba(0,0,0,0.54);
+}
+/* div des images */
+.slide {
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+    position: absolute;
+    transition: all 0.5s;
+}
+/* image dans la div slide*/
+.slide img {
+    position: absolute;
+    top: 0;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+/* boutton */
+.btn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background: #003478;
+    color: white;
+    font-size: 18px;
+}
+
+.btn:active {
+    transform: scale(1.1);
+}
+
+.btn:hover {
+    color: #FDB815;
+}
+
+.btn-prev {
+    top: 45%;
+    left: 2%;
+}
+
+.btn-next {
+    top: 45%;
+    right: 2%;
+}
+
+.btn > i {
+    align-items: center;
+    justify-content: center;
+}
+/* compteur au dessus d'image*/
+.photos-counter {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 10px;
+    color: white;
+    background: #003478;
+    font-family: 'Work Sans', sans-serif;
+}
+/* arrière plan flou */
+.blurry-bg {
+    background-position: 30% 30%;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    position: relative;
+    height: 600px;
+
+    filter: blur(50px) !important;
+}
+/* tout les background flou */
+#slide1 {
+    background-image: url("../assets/galerieA/claptrap.png");
+}
+
+#slide2 {
+    background-image: url("../assets/galerieA/claptrap_pose.jpeg");
+}
+
+#slide3 {
+    background-image: url("../assets/galerieA/claptrap_home.jpg");
+}
+
+#slide4 {
+    background-image: url("../assets/galerieA/claptrap_freehugs.jpg");
+}
+
+#slide5 {
+    background-image: url("../assets/galerieA/claptrap_drunk.jpg");
+}
+
+#slide6 {
+    background-image: url("../assets/jeuArcade/projet.jpg");
+}
+
+#slide7 {
+    background-image: url("../assets/jeuArcade/reflexion.jpg");
+}
+
+#slide8 {
+    background-image: url("../assets/jeuArcade/imageGroupe.jpg");
+}
+
+#slide9 {
+    background-image: url("../assets/jeuArcade/reflexion.jpg");
+}
+
+#slide10 {
+    background-image: url("../assets/sumobot/pièces.jpg");
+}
+
+#slide11 {
+    background-image: url("../assets/sumobot/sumobotHaut.jpg");
+}
+
+#slide12 {
+    background-image: url("../assets/sumobot/sumobot_trois.jpg");
+}
+
+#slide13 {
+    background-image: url("../assets/Atelier_soudure/tom.jpg");
+}
+
+#slide14 {
+    background-image: url("../assets/Atelier_soudure/elodie.jpg");
+}
+
+#slide15 {
+    background-image: url("../assets/Atelier_soudure/justine.jpg");
+}
+
+#slide16 {
+    background-image: url("../assets/Atelier_soudure/soudure_sumobot.jpg");
+}
+/* div titre galerie */
+.titrePart  {
+    display: flex;
+    height: 10em;
+    flex-flow: row;
+    justify-content: center;
+}
+
+.titreH {
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+hr  {
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+/* vidéo */
+.yt {
+    margin: 0 20px;
+    width: 100%;
+    max-width: 960px;
+    height: 60vh;
+    max-height: 540px;
+    box-shadow: 1px 1px 13px -2px rgba(0,0,0,0.54);
+}
+/* div vidéo */
+.container-video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+/* responsive */
+@media (max-width: 1240px) {
+    .slider {
+        margin: 0 20px;
+        width: auto;
+        height: 60vw;
+    }
+
+    .yt {
+        height: 60vw;
+    }
+
+    .carrousel .gallery {
+        margin: 10px 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .carrousel .gallery .minia {
+        height: 100px;
+        width: 180px;
+        margin-right: 10px;
+    }
+
+    .btn {
+        width: 30px;
+        height: 30px;
+        font-size: 13px;
+    }
+}
